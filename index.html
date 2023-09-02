@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script type="module" src="./js/main.js"></script>
+
+  <title>PideBus</title>
+</head>
+
+<body>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <nav class="navbar">
+    <div class="navbar_container">
+      <a class="navbar_item">Corporativo</a>
+      <a class="navbar_item">Cargo</a>
+      <div class="nav__container-logo">
+        <img class="logo" src="./assets/img/logo.png" alt="logo" />
+      </div>
+      <a class="navbar_item">COVID-19</a>
+      <a class="container_sesion-btn">
+        <svg viewBox="0 0 26 26">
+          <path
+            d="M13,0C5.8,0,0,5.8,0,13s5.8,13,13,13s13-5.9,13-13S20.1,0,13,0z M21.8,20.1c-0.5-0.2-0.8-0.5-1.3-0.5L16.9,19c-0.3,0-0.6-0.5-0.6-0.8v-0.8c0.2-0.3,0.5-0.8,0.6-1.1c0.2-0.3,0.5-0.8,0.6-1c0.6-0.6,1.5-1.5,1.6-2.6c0.2-1,0-1.5-0.2-1.9c0-1,0-2.3-0.3-3.3c0-1.3-0.3-1.9-0.8-2.6c-0.5-0.5-1-0.5-1.5-0.7c-0.2,0-0.5,0-0.5-0.2C14.8,3.6,14,3.2,13,3.2c-2.1,0.2-4.9,1.5-5.7,3.9C7,7.8,7,9.1,7.1,10.1v0.6c-0.3,0.3-0.5,0.8-0.3,1.8c0.2,1,1,1.8,1.6,2.6c0.2,0.2,0.3,0.6,0.7,1c0.2,0.5,0.5,0.8,0.6,1.1V18c0,0.3-0.3,0.6-0.6,0.8l-3.6,0.6c-0.5,0.2-1,0.3-1.3,0.5c-1.6-1.8-2.6-4.2-2.6-7c0-6.3,5-11.4,11.4-11.4s11.4,5,11.4,11.4C24.4,15.8,23.4,18.2,21.8,20.1z">
+          </path>
+        </svg>
+        <span>Iniciar</span>
+      </a>
+      <div class="menu-btn">
+        <div class="menu-btn_burger"></div>
+        <ul class="menu">
+          <li><a>Seguimiento de envíos</a></li>
+          <li><a>Promociones</a></li>
+          <li><a>Encuéntranos</a></li>
+          <li><a>Políticas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section class="home">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/assets/img/carrousell-1.jpg" class="d-block w-100" alt="1">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/img/carrousell-2.jpg" class="d-block w-100" alt="2">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/img/carrousell-3.jpg" class="d-block w-100" alt="3">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/img/carrousell-4.jpg" class="d-block w-100" alt="3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-aos-once data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">.</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">.</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="search">
+    <h4 class="search__title">Busca tu pasaje:</h4>
+    <form class="seach-form">
+      <div class="search__places">
+        <input id="from" name="from" type="text" class="form-control" placeholder="Desde" />
+        <input id="floatingInput" name="to" type="text" class="form-control" placeholder="Hasta" />
+      </div>
+      <div class="search__dates" data-aos="fade-up" data-aos-delay="200">
+        <input id="on-way" name="on-way" type="date" class="form-control" placeholder="Salida" />
+        <input id="round-trip" name="round-trip" type="date" class="form-control" placeholder="Vuelta" />
+      </div>
+      <button id="search__submit" class="btn btn-success" type="button" data-aos="fade-up"
+        data-aos-delay="400">Buscar</button>
+    </form>
+  </section>
+
+  <!-- WARNING -->
+  <section class="warning" data-aos="fade-right">
+    <img src="./assets/img/alert.png" alt="warning" />
+    <div class="warning__container">
+      <h4 class="warning__title">COMUNICADO</h4>
+      <span class="warning__text">Informamos a nuestros pasajeros y público en general que todos nuestros servicios,
+        están operando con
+        normalidad. Así mismo, cualquier eventualidad en las vías que pongan en riesgo la seguridad de su viaje y
+        suspendan nuestras salidas, se estará informando por medio de redes sociales o página web.</span>
+    </div>
+    <img src="./assets/img/alert.png" alt="warning" />
+  </section>
+
+  <!-- PAYMENT METHODS -->
+  <section class="payment-method">
+    <h3 class="payment-method__title">OPCIONES DE PAGO</h3>
+    <div class="payment-method__container">
+      <img data-aos-once data-aos="fade-up" data-aos-delay="0" src="./assets/svg/payment/lukita_1.png" alt="visa" />
+      <img data-aos-once data-aos="fade-up" data-aos-delay="150" src="./assets/svg/payment/lukita_1.png"
+        alt="mastercard" />
+      <img data-aos-once data-aos="fade-up" data-aos-delay="300" src="./assets/svg/payment/lukita_1.png" alt="lukita" />
+      <img data-aos-once data-aos="fade-up" data-aos-delay="450" src="./assets/svg/payment/logo.png" alt="yape" />
+      <img data-aos-once data-aos="fade-up" data-aos-delay="600" src="./assets/svg/payment/pagoefectivo-logo.png"
+        alt="efectivo" />
+      <img data-aos-once data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png" alt="bbva" />
+      <img data-aos-once data-aos="fade-up" data-aos-delay="600" src="./assets/svg/payment/pagoefectivo-logo.png"
+        alt="efectivo" />
+      <img data-aos-once data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png" alt="bbva" />
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="services__info">
+      <div class="services__info__benefits" data-aos="fade-right" data-aos-duration="1000">
+        <img src="./assets/img/promociones_alianzas.jpg" alt="promotions" />
+        <button class="btn btn-success" type="button">Mas Beneficios</button>
+      </div>
+      <div class="info__more" data-aos="fade-left" data-aos-duration="1000">
+        <img src="./assets/img/cargo.png" alt="promotions" />
+        <div class="info__more__container">
+          <h4 class="info__more__title">Cargo</h4>
+          <span class="info__more__text">Envía tus encomiendas de forma rápida y segura.</span>
+          <br>
+          <a class="info__more__link">Mas información</a>
+        </div>
+      </div>
+      <div class="info__more" data-aos="fade-left" data-aos-duration="1000">
+        <img src="./assets/img/corporativo.png" alt="promotions" />
+        <div class="info__more__container">
+          <h4 class="info__more__title">Corporativo</h4>
+          <span class="info__more__text">Convenios Corporativos, Alianzas Comerciales, Servicios Privados.</span>
+          <br>
+          <a class="info__more__link">Mas información</a>
+        </div>
+      </div>
+    </div>
+    <div class="services__sits">
+      <div class="services__sits__item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <img src="./assets/img/asiento140.png" alt="promotions" />
+        <div class="sits__container__container">
+          <h5 class="sits__container__title">Asiento 140°</h5>
+          <small class="sits__container__sub-title">(Económico)</small>
+          <span class="sits__container__text">Asiento económico que cuenta con conector USB y aire acondicionado.</span>
+        </div>
+      </div>
+      <div class="services__sits__item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <img src="./assets/img/asiento160.png" alt="promotions" />
+        <div class="sits__container__container">
+          <h5 class="sits__container__title">Asiento 160°</h5>
+          <small class="sits__container__sub-title">(Especial)</small>
+          <span class="sits__container__text">Asiento especial donde podrás recostarte y viajar cómodo, cuenta con
+            conector USB y aire
+            acondicionado.</span>
+        </div>
+      </div>
+      <div class="services__sits__item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <img src="./assets/img/asiento180.png" alt="promotions" />
+        <div class="sits__container__container">
+          <h5 class="sits__container__title">Asiento 180°</h5>
+          <small class="sits__container__sub-title">(Vip)</small>
+          <span class="sits__container__text">Asiento Vip (Tipo cama) donde podrás recostarte y viajar cómodo, cuenta
+            con
+            conector USB, aire
+            acondicionado y pantalla.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATION -->
+  <section class="destination">
+    <h3 class="destination__title">¡Encuentra tu destino!</h3>
+    <div class="destination__grid">
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+      <div class="destination__item">
+        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
+        <div class="destination__name">
+          <span>Viaja a</span>
+          <h3>Abancay</h3>
+        </div>
+        <div class="destination__item__more">
+          <h4>Abancay</h4>
+          <button class="btn btn-success" type="button">Leer más</button>
+        </div>
+      </div>
+    </div>
+    <button class="destination__item__btn btn btn-outline-success" type="button">Ver más destinos</button>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2 class="about__title">¿Por qué elegirnos?</h2>
+
+    <div class="about__container">
+      <div class="about__item">
+        <div class="about__item__img">
+          <img src="./assets/svg/about/icon_uno.svg" alt="1" />
+        </div>
+        <span class="about__item__text">
+          <b>41 Años Creando</b>
+          <br>
+          las mejores experiencias de viaje
+        </span>
+      </div>
+
+      <div class="about__item">
+        <div class="about__item__img">
+          <img src="./assets/svg/about/icon_asiento.svg" alt="1" />
+        </div>
+        <span class="about__item__text">
+          <b>Asientos ergonómicos</b>
+          <br>
+          con diferentes grados de inclinación
+        </span>
+      </div>
+
+      <div class="about__item">
+        <div class="about__item__img">
+          <img src="./assets/svg/about/icon_bus.svg" alt="1" />
+        </div>
+        <span class="about__item__text">
+          <b>Flota moderna</b>
+          <br>
+          y de última generación
+        </span>
+      </div>
+
+      <div class="about__item">
+        <div class="about__item__img">
+          <img src="./assets/svg/about/icon_gps.svg" alt="1" />
+        </div>
+        <span class="about__item__text">
+          <b>Control GPS</b>
+          <br>
+          y cambio de choferes cada 4 horas
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__flex">
+      <div class="footer__container">
+        <img class="footer__logo" src="./assets/img/logo.png" alt="logo" />
+        <span class="footer__container__text">Unimos corazones desde Tacna a Lima, también llegaremos a Mollendo, Camaná
+          e ello. Planifica tu próximo
+          viaje con nosotros, viaja con confort y seguridad.</span>
+      </div>
+      <div class="footer__container">
+        <h4 class="footer__container__title">Agencias</h4>
+        <span class="footer__container__text">
+          <b>Lima</b><br>
+          Terminal Terrestre Ronco Perú - Av. lquitos 387, int. counter n 06, la Victoria
+        </span>
+        <span class="footer__container__text">
+          <b>Tacna</b><br>
+          Prolongación Hipólito Unanue s/n, intersección con la Av. Jorge Basadre Grohman Oeste, int. COunter n 09
+        </span>
+      </div>
+      <div class="footer__container">
+        <span class="footer__container__text">
+          <b>llo</b><br>
+          Pampa inalámbrica al Sur Este, Int. counter n 16
+        </span>
+        <span class="footer__container__text">
+          <b>Mollendo</b><br>
+          Av. Industrial inmueble 01, int. counter n 17
+        </span>
+        <span class="footer__container__text">
+          <b>Camana</b><br>
+          Av. Lima
+        </span>
+      </div>
+      <div class="footer__container">
+        <h4 class="footer__container__title">Contacto</h4>
+        <a href="#" target="_blank">+51 999 999 999</a>
+        <a href="#" target="_blank">contacto@example.com</a>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Termino y condiciones</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Copiright</span>
+    </div>
+  </footer>
+</body>
+
+</html>

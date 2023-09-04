@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -9,24 +9,30 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- BOOTSTRAP -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/load.js"></script>
 
   <title>PideBus</title>
 </head>
 
 <body>
   <script>
-    AOS.init();
+    AOS.init({ offset: 50 });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+
+  <div id="loading">
+    <img src="./assets/img/loading.gif" alt="loading" />
+  </div>
 
   <nav class="navbar">
     <div class="navbar_container">
@@ -89,17 +95,30 @@
   <!-- SEARCH -->
   <section class="search">
     <h4 class="search__title">Busca tu pasaje:</h4>
-    <form class="seach-form">
+    <form class="seach__form">
       <div class="search__places">
-        <input id="from" name="from" type="text" class="form-control" placeholder="Desde" />
-        <input id="floatingInput" name="to" type="text" class="form-control" placeholder="Hasta" />
+        <div class="search__input-container">
+          <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
+          <label for="from">Desde</label>
+          <input id="from" name="from" type="text" class="form-control" placeholder="Desde" />
+        </div>
+        <div class="search__input-container">
+          <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
+          <label for="to">Hasta</label>
+          <input id="floatingInput" name="to" type="text" class="form-control" placeholder="Hasta" />
+        </div>
       </div>
-      <div class="search__dates" data-aos="fade-up" data-aos-delay="200">
-        <input id="on-way" name="on-way" type="date" class="form-control" placeholder="Salida" />
-        <input id="round-trip" name="round-trip" type="date" class="form-control" placeholder="Vuelta" />
+      <div class="search__dates">
+        <div class="search__input-container">
+          <label for="on-way">Salida</label>
+          <input id="on-way" name="on-way" type="date" class="form-control" placeholder="Salida" />
+        </div>
+        <div class="search__input-container">
+          <label for="round-trip">Vuelta</label>
+          <input id="round-trip" name="round-trip" type="date" class="form-control" placeholder="Vuelta" />
+        </div>
       </div>
-      <button id="search__submit" class="btn btn-success" type="button" data-aos="fade-up"
-        data-aos-delay="400">Buscar</button>
+      <button id="search__submit" class="btn btn-success" type="button">Buscar</button>
     </form>
   </section>
 
@@ -120,17 +139,22 @@
   <section class="payment-method">
     <h3 class="payment-method__title">OPCIONES DE PAGO</h3>
     <div class="payment-method__container">
-      <img data-aos-once data-aos="fade-up" data-aos-delay="0" src="./assets/svg/payment/lukita_1.png" alt="visa" />
-      <img data-aos-once data-aos="fade-up" data-aos-delay="150" src="./assets/svg/payment/lukita_1.png"
-        alt="mastercard" />
-      <img data-aos-once data-aos="fade-up" data-aos-delay="300" src="./assets/svg/payment/lukita_1.png" alt="lukita" />
-      <img data-aos-once data-aos="fade-up" data-aos-delay="450" src="./assets/svg/payment/logo.png" alt="yape" />
-      <img data-aos-once data-aos="fade-up" data-aos-delay="600" src="./assets/svg/payment/pagoefectivo-logo.png"
+      <img data-aos-once="true" data-aos="fade-up" data-aos-delay="0" src="./assets/svg/payment/lukita_1.png"
+        alt="visa" />
+      <img data-aos-once="true" data-aos="fade-up" data-aos-delay="150" src="./assets/svg/payment/lukita_1.png"
+        alt="mastercard"="true" />
+      <img data-aos-once="true" data-aos="fade-up" data-aos-delay="300" src="./assets/svg/payment/lukita_1.png"
+        alt="lukita" />
+      <img data-aos-once="true" data-aos="fade-up" data-aos-delay="450" src="./assets/svg/payment/logo.png"
+        alt="yape" />
+      <img data-aos-once="true" data-aos="fade-up" data-aos-delay="600" src="./assets/svg/payment/pagoefectivo-logo.png"
         alt="efectivo" />
-      <img data-aos-once data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png" alt="bbva" />
-      <img data-aos-once data-aos="fade-up" data-aos-delay="600" src="./assets/svg/payment/pagoefectivo-logo.png"
+      <img data-aos-once="true" data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png"
+        alt="bbva" />
+      <img data-aos-once="true" data-aos="fade-up" data-aos-delay="600" src="./assets/svg/payment/pagoefectivo-logo.png"
         alt="efectivo" />
-      <img data-aos-once data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png" alt="bbva" />
+      <img data-aos-once="true" data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png"
+        alt="bbva" />
     </div>
   </section>
 
@@ -339,10 +363,10 @@
 
     <div class="about__container">
       <div class="about__item">
-        <div class="about__item__img">
+        <div data-aos-once="true" data-aos="fade-up" data-aos-delay="0" class="about__item__img">
           <img src="./assets/svg/about/icon_uno.svg" alt="1" />
         </div>
-        <span class="about__item__text">
+        <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="100">
           <b>41 Años Creando</b>
           <br>
           las mejores experiencias de viaje
@@ -350,10 +374,10 @@
       </div>
 
       <div class="about__item">
-        <div class="about__item__img">
+        <div class="about__item__img" data-aos-once="true" data-aos="fade-up" data-aos-delay="200">
           <img src="./assets/svg/about/icon_asiento.svg" alt="1" />
         </div>
-        <span class="about__item__text">
+        <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="300">
           <b>Asientos ergonómicos</b>
           <br>
           con diferentes grados de inclinación
@@ -361,10 +385,10 @@
       </div>
 
       <div class="about__item">
-        <div class="about__item__img">
+        <div class="about__item__img" data-aos-once="true" data-aos="fade-up" data-aos-delay="400">
           <img src="./assets/svg/about/icon_bus.svg" alt="1" />
         </div>
-        <span class="about__item__text">
+        <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="500">
           <b>Flota moderna</b>
           <br>
           y de última generación
@@ -372,10 +396,10 @@
       </div>
 
       <div class="about__item">
-        <div class="about__item__img">
+        <div class="about__item__img" data-aos-once="true" data-aos="fade-up" data-aos-delay="600">
           <img src="./assets/svg/about/icon_gps.svg" alt="1" />
         </div>
-        <span class="about__item__text">
+        <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="700">
           <b>Control GPS</b>
           <br>
           y cambio de choferes cada 4 horas
@@ -430,6 +454,13 @@
       <span>Copiright</span>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

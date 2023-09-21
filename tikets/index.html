@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="./js/filters.js"></script>
+  <script type="module" src="./js/menu.js"></script>
+  <script type="module" src="./js/cards.js"></script>
+  <script type="module" src="./js/buttons-asientos.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <title>PideBus</title>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <nav class="navbar">
+    <div class="navbar_container">
+      <a class="navbar_item">Corporativo</a>
+      <a class="navbar_item">Cargo</a>
+      <div class="nav__container-logo">
+        <img class="logo" src="./assets/img/logo.png" alt="logo" />
+      </div>
+      <a class="navbar_item">COVID-19</a>
+      <a class="container_sesion-btn">
+        <svg viewBox="0 0 26 26">
+          <path
+            d="M13,0C5.8,0,0,5.8,0,13s5.8,13,13,13s13-5.9,13-13S20.1,0,13,0z M21.8,20.1c-0.5-0.2-0.8-0.5-1.3-0.5L16.9,19c-0.3,0-0.6-0.5-0.6-0.8v-0.8c0.2-0.3,0.5-0.8,0.6-1.1c0.2-0.3,0.5-0.8,0.6-1c0.6-0.6,1.5-1.5,1.6-2.6c0.2-1,0-1.5-0.2-1.9c0-1,0-2.3-0.3-3.3c0-1.3-0.3-1.9-0.8-2.6c-0.5-0.5-1-0.5-1.5-0.7c-0.2,0-0.5,0-0.5-0.2C14.8,3.6,14,3.2,13,3.2c-2.1,0.2-4.9,1.5-5.7,3.9C7,7.8,7,9.1,7.1,10.1v0.6c-0.3,0.3-0.5,0.8-0.3,1.8c0.2,1,1,1.8,1.6,2.6c0.2,0.2,0.3,0.6,0.7,1c0.2,0.5,0.5,0.8,0.6,1.1V18c0,0.3-0.3,0.6-0.6,0.8l-3.6,0.6c-0.5,0.2-1,0.3-1.3,0.5c-1.6-1.8-2.6-4.2-2.6-7c0-6.3,5-11.4,11.4-11.4s11.4,5,11.4,11.4C24.4,15.8,23.4,18.2,21.8,20.1z">
+          </path>
+        </svg>
+        <span>Iniciar</span>
+      </a>
+      <div class="menu-btn">
+        <div class="menu-btn_burger"></div>
+        <ul class="menu">
+          <li><a>Seguimiento de envíos</a></li>
+          <li><a>Promociones</a></li>
+          <li><a>Encuéntranos</a></li>
+          <li><a>Políticas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SEARCH -->
+  <section class="search">
+    <h4 class="search__title">Busca tu pasaje:</h4>
+    <form class="seach__form">
+      <div class="search__places">
+        <div class="search__input-container">
+          <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
+          <label for="from">Desde</label>
+          <input id="from" name="from" type="text" class="form-control" placeholder="Desde" />
+        </div>
+        <div class="search__input-container">
+          <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
+          <label for="to">Hasta</label>
+          <input id="floatingInput" name="to" type="text" class="form-control" placeholder="Hasta" />
+        </div>
+      </div>
+      <div class="search__dates">
+        <div class="search__input-container">
+          <label for="on-way">Salida</label>
+          <input id="on-way" name="on-way" type="date" class="form-control" placeholder="Salida" />
+        </div>
+        <div class="search__input-container">
+          <label for="round-trip">Vuelta</label>
+          <input id="round-trip" name="round-trip" type="date" class="form-control" placeholder="Vuelta" />
+        </div>
+      </div>
+      <button id="search__submit" class="btn btn-success" type="button">Buscar</button>
+    </form>
+  </section>
+  <!-- CARDS + FILTERS -->
+  <section class="bg__gray">
+    <div class="sect__cards">
+      <div class="filters">
+
+      </div>
+      <div class="cards">
+        
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__flex">
+      <div class="footer__container">
+        <img class="footer__logo" src="./assets/img/logo.png" alt="logo" />
+        <span class="footer__container__text">Unimos corazones desde Tacna a Lima, también llegaremos a Mollendo, Camaná
+          e ello. Planifica tu próximo
+          viaje con nosotros, viaja con confort y seguridad.</span>
+      </div>
+      <div class="footer__container">
+        <h4 class="footer__container__title">Agencias</h4>
+        <span class="footer__container__text">
+          <b>Lima</b><br>
+          Terminal Terrestre Ronco Perú - Av. lquitos 387, int. counter n 06, la Victoria
+        </span>
+        <span class="footer__container__text">
+          <b>Tacna</b><br>
+          Prolongación Hipólito Unanue s/n, intersección con la Av. Jorge Basadre Grohman Oeste, int. COunter n 09
+        </span>
+      </div>
+      <div class="footer__container">
+        <span class="footer__container__text">
+          <b>llo</b><br>
+          Pampa inalámbrica al Sur Este, Int. counter n 16
+        </span>
+        <span class="footer__container__text">
+          <b>Mollendo</b><br>
+          Av. Industrial inmueble 01, int. counter n 17
+        </span>
+        <span class="footer__container__text">
+          <b>Camana</b><br>
+          Av. Lima
+        </span>
+      </div>
+      <div class="footer__container">
+        <h4 class="footer__container__title">Contacto</h4>
+        <a href="#" target="_blank">+51 999 999 999</a>
+        <a href="#" target="_blank">contacto@example.com</a>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Termino y condiciones</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Copiright</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "empresa": "Tauro Bus Perú",
+    "fechaSalida": "Wed Sep 13 2023 04:30:00 GMT-0300",
+    "fechaLlegada": "Wed Sep 13 2023 18:00:00 GMT-0300",
+    "terminalSalida": "Terminal 1s",
+    "terminalLlegada": "Terminal 3l",
+    "reembolsable": false,
+    "precio": 45
+  },
+  {
+    "id": 1,
+    "empresa": "Tauro Bus Perú",
+    "fechaSalida": "Wed Sep 13 2023 06:45:00 GMT-0300",
+    "fechaLlegada": "Wed Sep 13 2023 15:30:00 GMT-0300",
+    "terminalSalida": "Terminal 2s",
+    "terminalLlegada": "Terminal 3l",
+    "reembolsable": true,
+    "precio": 45
+  },
+  {
+    "id": 1,
+    "empresa": "Plus Bus Perú",
+    "fechaSalida": "Wed Sep 13 2023 12:00:00 GMT-0300",
+    "fechaLlegada": "Wed Sep 13 2023 22:30:00 GMT-0300",
+    "terminalSalida": "Terminal 3s",
+    "terminalLlegada": "Terminal 4l",
+    "reembolsable": false,
+    "precio": 35
+  },
+  {
+    "id": 1,
+    "empresa": "Plus Bus Perú",
+    "fechaSalida": "Wed Sep 13 2023 16:00:00 GMT-0300",
+    "fechaLlegada": "Wed Sep 14 2023 02:45:00 GMT-0300",
+    "terminalSalida": "Terminal 1s",
+    "terminalLlegada": "Terminal 3l",
+    "reembolsable": false,
+    "precio": 35
+  }
+]

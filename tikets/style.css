@@ -212,6 +212,11 @@
   margin: 10px auto;
   gap: 10px;
 }
+
+.row_cards{
+  max-width: var(--max-width);
+}
+
 .filters{
   display: flex;
   width: 15%;
@@ -1045,4 +1050,32 @@ margin: 5px 0;
     max-width: 200px;
     height: 50px;
   }
+}
+
+/* DEVICES */
+
+/* Small (SM) - Pantallas mayores o iguales a 576px */
+@media screen and (max-width: 576px) {
+  .card__pidebus{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+/* Medium (MD) - Pantallas mayores o iguales a 768px */
+@media (768px <=  width < 992px) {
+
+}
+
+/* Large (LG) - Pantallas mayores o iguales a 992px */
+@media (992px <=  width < 1200px) {
+
+
+}
+
+/* Extra large (XL) - Pantallas mayores o iguales a 1200px */
+@media  screen and (max-width: 1200px) {
+  /* Tus estilos para pantallas extra grandes aquí */
+
 }

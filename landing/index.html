@@ -34,6 +34,7 @@
     <img src="./assets/img/loading.gif" alt="loading" />
   </div>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="navbar_container">
       <a class="navbar_item">Corporativo</a>
@@ -94,45 +95,87 @@
 
   <!-- SEARCH -->
   <section class="search">
-    <h4 class="search__title">Busca tu pasaje:</h4>
     <form class="seach__form">
       <div class="search__places">
         <div class="search__input-container">
           <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
-          <label for="from">Desde</label>
+          <label for="from">ORIGEN</label>
           <input id="from" name="from" type="text" class="form-control" placeholder="Desde" />
         </div>
         <div class="search__input-container">
           <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
-          <label for="to">Hasta</label>
+          <label for="to">DESTINO</label>
           <input id="floatingInput" name="to" type="text" class="form-control" placeholder="Hasta" />
         </div>
       </div>
       <div class="search__dates">
         <div class="search__input-container">
-          <label for="on-way">Salida</label>
+          <label for="on-way">SALIDA</label>
           <input id="on-way" name="on-way" type="date" class="form-control" placeholder="Salida" />
         </div>
         <div class="search__input-container">
-          <label for="round-trip">Vuelta</label>
+          <label for="round-trip">RETORNO (OPCIONAL)</label>
           <input id="round-trip" name="round-trip" type="date" class="form-control" placeholder="Vuelta" />
         </div>
       </div>
-      <button id="search__submit" class="btn btn-success" type="button">Buscar</button>
+      <button id="search__submit" class="btn" type="button">Buscar</button>
     </form>
   </section>
 
-  <!-- WARNING -->
-  <section class="warning" data-aos="fade-right">
-    <img src="./assets/img/alert.png" alt="warning" />
-    <div class="warning__container">
-      <h4 class="warning__title">COMUNICADO</h4>
-      <span class="warning__text">Informamos a nuestros pasajeros y público en general que todos nuestros servicios,
-        están operando con
-        normalidad. Así mismo, cualquier eventualidad en las vías que pongan en riesgo la seguridad de su viaje y
-        suspendan nuestras salidas, se estará informando por medio de redes sociales o página web.</span>
+  <!-- INCENTIVE -->
+  <section class="section-incentive">
+    <div class="row section-incentive_row">
+      <div
+        class="col-lg-12 col-md-12 col-sm-12 d-flex flex-col justify-content-center align-items-center text-center m-auto">
+        <h3 class="incentive_title">
+          ¿POR QUÉ COMPRAR EN NUESTRA WEB?
+        </h3>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-incetive_2 d-flex justify-content-center align-items-center">
+        <div class="col-about d-flex flex-wrap justify-content-center text-center align-items-center">
+          <div class="col-6 col-sm-3">
+            <div class="about__item">
+              <div data-aos-once="true" data-aos="fade-up" data-aos-delay="0" class="about__item__img">
+                <img src="./assets/svg/about/porcentaje.svg" alt="1" />
+              </div>
+              <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="100">
+                <b>Mejores tarifas</b>
+              </span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="about__item">
+              <div class="about__item__img" data-aos-once="true" data-aos="fade-up" data-aos-delay="200">
+                <img src="./assets/svg/about/icon_asiento.svg" alt="1" />
+              </div>
+              <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="300">
+                <b>Elige tu asiento</b>
+              </span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="about__item">
+              <div class="about__item__img" data-aos-once="true" data-aos="fade-up" data-aos-delay="400">
+                <img src="./assets/svg/about/monitor.svg" alt="1" />
+              </div>
+              <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="500">
+                <b>Saltar las líneas</b>
+              </span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="about__item">
+              <div class="about__item__img" data-aos-once="true" data-aos="fade-up" data-aos-delay="600">
+                <img src="./assets/svg/about/pay.svg" alt="1" />
+              </div>
+              <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="700">
+                <b>Mejores métodos de pago</b>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <img src="./assets/img/alert.png" alt="warning" />
   </section>
 
   <!-- PAYMENT METHODS -->
@@ -158,254 +201,88 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="services">
-    <div class="services__info">
-      <div class="services__info__benefits" data-aos="fade-right" data-aos-duration="1000">
-        <img src="./assets/img/promociones_alianzas.jpg" alt="promotions" />
-        <button class="btn btn-success" type="button">Mas Beneficios</button>
+  <!-- BUS ROUTES -->
+  <section class="bus-routes d-flex flex-column justify-content-center align-items-center m-auto">
+    <div class="row bus-routes_row">
+      <div class="col-lg-12 d-flex flex-col justify-content-center align-items-center m-auto">
+        <h3 class="bus-routes_title">
+          ¿Cuáles son las rutas de bus más populares?
+        </h3>
       </div>
-      <div class="info__more" data-aos="fade-left" data-aos-duration="1000">
-        <img src="./assets/img/cargo.png" alt="promotions" />
-        <div class="info__more__container">
-          <h4 class="info__more__title">Cargo</h4>
-          <span class="info__more__text">Envía tus encomiendas de forma rápida y segura.</span>
-          <br>
-          <a class="info__more__link">Mas información</a>
-        </div>
-      </div>
-      <div class="info__more" data-aos="fade-left" data-aos-duration="1000">
-        <img src="./assets/img/corporativo.png" alt="promotions" />
-        <div class="info__more__container">
-          <h4 class="info__more__title">Corporativo</h4>
-          <span class="info__more__text">Convenios Corporativos, Alianzas Comerciales, Servicios Privados.</span>
-          <br>
-          <a class="info__more__link">Mas información</a>
-        </div>
-      </div>
-    </div>
-    <div class="services__sits">
-      <div class="services__sits__item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img src="./assets/img/asiento140.png" alt="promotions" />
-        <div class="sits__container__container">
-          <h5 class="sits__container__title">Asiento 140°</h5>
-          <small class="sits__container__sub-title">(Económico)</small>
-          <span class="sits__container__text">Asiento económico que cuenta con conector USB y aire acondicionado.</span>
-        </div>
-      </div>
-      <div class="services__sits__item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="./assets/img/asiento160.png" alt="promotions" />
-        <div class="sits__container__container">
-          <h5 class="sits__container__title">Asiento 160°</h5>
-          <small class="sits__container__sub-title">(Especial)</small>
-          <span class="sits__container__text">Asiento especial donde podrás recostarte y viajar cómodo, cuenta con
-            conector USB y aire
-            acondicionado.</span>
-        </div>
-      </div>
-      <div class="services__sits__item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-        <img src="./assets/img/asiento180.png" alt="promotions" />
-        <div class="sits__container__container">
-          <h5 class="sits__container__title">Asiento 180°</h5>
-          <small class="sits__container__sub-title">(Vip)</small>
-          <span class="sits__container__text">Asiento Vip (Tipo cama) donde podrás recostarte y viajar cómodo, cuenta
-            con
-            conector USB, aire
-            acondicionado y pantalla.</span>
+      <div class="col-lg-12 d-flex justify-content-center align-items-center m-auto">
+        <div class="row d-flex justify-content-between m-auto align-items-center w-100">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-routes d-flex flex-column">
+            <a href="">Bus de Lima a Tacna</a>
+            <a href="">Bus de Tacna a Lima</a>
+            <a href="">Bus de Lima a Desaguadero</a>
+            <a href="">Bus de Desaguadero a Lima</a>
+            <a href="">Bus de Lima a Juliaca</a>
+            <a href="">Bus de Juliaca a Lima</a>
+            <a href="">Bus de Lima a Puno</a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-routes d-flex flex-column">
+            <a href="">Bus de Lima a Cusco</a>
+            <a href="">Bus de Cusco a Lima</a>
+            <a href="">Bus de Lima a Nazca</a>
+            <a href="">Bus de Nazca a Lima</a>
+            <a href="">Bus de Lima a Ayacucho</a>
+            <a href="">Bus de Ayacucho a Lima</a>
+            <a href="">Bus de Lima a Huaraz</a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-routes d-none d-sm-flex flex-column">
+            <a href="">Bus de Lima a Jaen</a>
+            <a href="">Bus de Jaen a Lima</a>
+            <a href="">Bus de Lima a Piura</a>
+            <a href="">Bus de Piura a Lima</a>
+            <a href="">Bus de Lima a Sullana</a>
+            <a href="">Bus de Sullana a Lima</a>
+            <a href="">Bus de Lima a Talara</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- DESTINATION -->
-  <section class="destination">
-    <h3 class="destination__title">¡Encuentra tu destino!</h3>
-    <div class="destination__grid">
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
+  <!-- COMPANIES -->
+  <section class="section-companies">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h3 class="payment-method__title">EMPRESAS ALIADAS</h3>
+        <h4 class="payment-method__title">Más de 150 empresas de bus</h4>
+        <div class="companies__container">
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="0" src="./assets/svg/payment/lukita_1.png"
+            alt="visa" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="150" src="./assets/svg/payment/lukita_1.png"
+            alt="mastercard"="true" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="300" src="./assets/svg/payment/lukita_1.png"
+            alt="lukita" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="450" src="./assets/svg/payment/logo.png"
+            alt="yape" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="600"
+            src="./assets/svg/payment/pagoefectivo-logo.png" alt="efectivo" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png"
+            alt="bbva" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="600"
+            src="./assets/svg/payment/pagoefectivo-logo.png" alt="efectivo" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png"
+            alt="bbva" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png"
+            alt="bbva" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png"
+            alt="bbva" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png"
+            alt="bbva" />
+          <img data-aos-once="true" data-aos="fade-up" data-aos-delay="750" src="./assets/svg/payment/lukita_1.png"
+            alt="bbva" />
         </div>
       </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
-      </div>
-      <div class="destination__item">
-        <img class="destination__item__img" src="./assets/img/places/destino_abancay_imagen0.jpg" alt="abacay" />
-        <div class="destination__name">
-          <span>Viaja a</span>
-          <h3>Abancay</h3>
-        </div>
-        <div class="destination__item__more">
-          <h4>Abancay</h4>
-          <button class="btn btn-success" type="button">Leer más</button>
-        </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center m-2 ">
+        <button>
+          VER TODO
+        </button>
       </div>
     </div>
-    <button class="destination__item__btn btn btn-outline-success" type="button">Ver más destinos</button>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <h2 class="about__title">¿Por qué elegirnos?</h2>
-
-    <div class="about__container">
-      <div class="about__item">
-        <div data-aos-once="true" data-aos="fade-up" data-aos-delay="0" class="about__item__img">
-          <img src="./assets/svg/about/icon_uno.svg" alt="1" />
-        </div>
-        <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="100">
-          <b>41 Años Creando</b>
-          <br>
-          las mejores experiencias de viaje
-        </span>
-      </div>
-
-      <div class="about__item">
-        <div class="about__item__img" data-aos-once="true" data-aos="fade-up" data-aos-delay="200">
-          <img src="./assets/svg/about/icon_asiento.svg" alt="1" />
-        </div>
-        <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="300">
-          <b>Asientos ergonómicos</b>
-          <br>
-          con diferentes grados de inclinación
-        </span>
-      </div>
-
-      <div class="about__item">
-        <div class="about__item__img" data-aos-once="true" data-aos="fade-up" data-aos-delay="400">
-          <img src="./assets/svg/about/icon_bus.svg" alt="1" />
-        </div>
-        <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="500">
-          <b>Flota moderna</b>
-          <br>
-          y de última generación
-        </span>
-      </div>
-
-      <div class="about__item">
-        <div class="about__item__img" data-aos-once="true" data-aos="fade-up" data-aos-delay="600">
-          <img src="./assets/svg/about/icon_gps.svg" alt="1" />
-        </div>
-        <span class="about__item__text" data-aos-once="true" data-aos="fade-up" data-aos-delay="700">
-          <b>Control GPS</b>
-          <br>
-          y cambio de choferes cada 4 horas
-        </span>
-      </div>
-    </div>
   </section>
 
   <!-- FOOTER -->

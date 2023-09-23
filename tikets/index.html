@@ -12,8 +12,8 @@
   <script type="module" src="./js/cards.js"></script>
   <script type="module" src="./js/buttons-asientos.js"></script>
 
-    <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <title>PideBus</title>
 </head>
@@ -51,6 +51,8 @@
     </div>
   </nav>
 
+
+
   <!-- SEARCH -->
   <section class="search">
     <h4 class="search__title">Busca tu pasaje:</h4>
@@ -80,14 +82,33 @@
       <button id="search__submit" class="btn btn-success" type="button">Buscar</button>
     </form>
   </section>
-  <!-- CARDS + FILTERS -->
-  <section class="bg__gray">
-    <div class="sect__cards">
-      <div class="filters">
+
+  <!-- BUTTON FILTER -->
+  <div id="buttonCollapse" class="d-none">
+    <p class="d-flex justify-content-center mt-3">
+      <a class="btn btn-primary w-100" data-toggle="collapse" href="#collapseExample" role="button"
+        aria-expanded="false" aria-controls="collapseExample">
+        Filtros
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div id="filterCollapse" class="card card-body w-full w-100">
 
       </div>
-      <div class="cards">
-        
+    </div>
+  </div>
+
+
+
+  <!-- CARDS + FILTERS -->
+  <section class="bg__gray w-full">
+    <div>
+      <div class="row row_cards w-full d-flex justify-content-center m-auto">
+        <div id="colFilters" class="filters col-lg-2 col-sm-12 w-full">
+        </div>
+        <div class="cards col-lg-10 col-sm-12 w-100">
+
+        </div>
       </div>
     </div>
   </section>

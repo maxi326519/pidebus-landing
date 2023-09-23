@@ -10,6 +10,16 @@
   --max-width: 1200px;
 }
 
+html, body {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 #loading {
   position: fixed;
   z-index: 5000;
@@ -197,7 +207,6 @@
 
 /* SEARCH */
 .search {
-  padding: 10px;
   background-color: var(--primary-color);
   max-width: 100%;
 }
@@ -206,7 +215,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  height: 100%
+ 
 }
 
 .search__title {
@@ -220,13 +230,13 @@
   flex-direction: column;
   width: 100%;
   max-width: 500px;
-  gap: 10px;
+  
 }
 
 .search__input-container {
   position: relative;
-  border-radius: 5px;
   background-color: white;
+  
 }
 
 .search__input-container label {
@@ -246,52 +256,19 @@
 }
 
 .search input {
-  height: 50px;
+  height: 70px;
   padding-top: 20px;
-  border: none;
+  border-radius: none;
+}
+
+.search input::placeholder {
+ position: relative;
+  left: 1rem;
 }
 
 .search button {
-  border: none;
-  border-radius: 50px;
+  height: 70px !important;
   width: 100%;
-  max-width: 500px;
-}
-
-/* WARNING */
-.warning {
-  padding: 20px;
-  margin: 50px 10px;
-  border-radius: 20px;
-  background-color: var(--primary-color);
-}
-
-.warning__container {
-  color: white;
-}
-
-.warning img {
-  width: 50px;
-}
-
-.warning__title {
-  border-radius: 50px;
-  margin: auto;
-  width: min-content;
-  padding: 10px 18px;
-  text-align: center;
-  color: var(--primary-color);
-  background-color: white;
-}
-
-.warning__text {
-  display: inline-block;
-  padding: 20px 10px;
-}
-
-.warning img:last-child {
-  position: relative;
-  left: calc(100% - 50px);
 }
 
 /* PAYMENT METHODS */
@@ -324,266 +301,53 @@
   display: none;
 }
 
-/* SERVICES */
-.services {
+/* BUS ROUTES */
+
+.bus-routes{
+  max-width: var(--max-width);
+}
+
+.col-routes{
+  flex: 1; 
+  align-items: baseline center;
+}
+
+.col-routes a{
+  margin: 10px 0;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+/* COMPANIES */
+
+.section-companies {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border-radius: 20px;
   padding: 10px;
   background-color: #0002;
-  overflow: hidden;
+  margin: 3rem auto;
 }
 
-.services__info {
-  display: flex;
-  gap: 10px;
-  padding: 30px 0;
-  flex-direction: column;
-}
-
-.services__info__benefits {
-  position: relative;
-  border: 4px solid white;
-  overflow: hidden;
-  box-shadow: 0 0 10px 10px #0002;
-}
-
-.services__info__benefits img {
-  width: 100%;
-  transition: 0.4s;
-}
-
-.services__info__benefits:hover img {
-  transform: scale(1.15);
-  transition: 0.4s;
-}
-
-.services__info__benefits button {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
-
-.info__more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 4px solid white;
-  overflow: hidden;
-  box-shadow: 0 0 10px 10px #0002;
-}
-
-.info__more img {
-  position: absolute;
-  z-index: 100;
-  min-width: 100%;
-  min-height: max-content;
-  transition: 0.4s;
-}
-
-.info__more:hover img {
-  transform: scale(1.15);
-  transition: 0.4s;
-}
-
-.info__more__container {
-  position: relative;
-  z-index: 200;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(to right, white, #fff8);
-}
-
-.info__more__title {
-  color: var(--primary-color);
-}
-
-.info__more__link {
-  color: var(--primary-color);
-}
-
-.services__sits {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 30px 0;
-}
-
-.services__sits__item {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 10px #0002;
-  overflow: hidden;
-}
-
-.services__sits__item img {
-  width: 80%;
-  max-width: max-content;
-  max-height: 90%;
-}
-
-.services__sits__item:before {
-  position: absolute;
-  z-index: 50;
-  content: "";
-  width: 50%;
-  height: 200%;
-  opacity: 0;
-  border-radius: 50%;
-  background-color: #0009;
-}
-
-.sits__container__container {
-  position: absolute;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 50px;
-  text-align: center;
-  opacity: 0;
-  color: white;
-}
-
-.sits__container__title {
-  margin-bottom: 0;
-}
-
-.sits__container__text {
-  margin-top: 15px;
-}
-
-.services__sits__item:hover:before {
-  width: 150%;
-  opacity: 1;
-  transition: 0.4s;
-}
-
-.services__sits__item:hover:hover .sits__container__container {
-  opacity: 1;
-  transition: 0.4s;
-}
-
-/* DESTINATION */
-.destination {
-  padding: 30px 10px;
-}
-
-.destination__title {
-  width: 100%;
-  margin-bottom: 40px;
-  text-align: center;
-  color: var(--primary-color);
-}
-
-.destination__grid {
+.companies__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, 1fr);
-  gap: 10px;
-}
-
-.destination__item {
-  position: relative;
-  display: flex;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
+  justify-items: center; 
 }
 
-.destination__item:before {
-  position: absolute;
-  z-index: 50;
-  content: "";
-  width: 10%;
-  height: 10%;
-  border-radius: 50%;
-  opacity: 0;
-  background-color: #ff6600aa;
-  transition: 0.5s;
-}
-
-.destination__item__img {
-  z-index: 0;
-  width: max-content;
-  min-height: 100%;
-  transition: 0.5s;
-}
-
-.destination__name {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  opacity: 1;
-  color: white;
-  background: linear-gradient(to top, black 0, #0006 30%, #0002 100%);
-  transition: 0.5s;
-}
-
-.destination__item__more {
-  position: absolute;
-  z-index: 150;
-  top: 100%;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  color: white;
-}
-
-.destination__item__more h4 {
-  margin-bottom: 20px;
-}
-
-.destination__item__more h4,
-.destination__item__more button {
-  position: relative;
-  z-index: 100;
-}
-
-.destination__item:hover .destination__item__img {
-  transform: scale(1.2) rotate(5deg);
-  transition: 0.5s;
-}
-
-.destination__item:hover .destination__name {
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.destination__item:hover:before {
-  width: 150%;
-  height: 150%;
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.destination__item:hover .destination__item__more {
-  top: 0;
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.destination__item__btn {
-  width: 100%;
-  margin: 30px 0;
+.companies__container img {
+  max-width: 100%;
+  height: auto;
+  width: 8rem;
+  margin: 0 auto;
+  place-content: center;
+  justify-self: center; 
 }
 
 /* ABOUTUS */
@@ -597,10 +361,8 @@
   color: var(--primary-color);
 }
 
-.about__container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.col-about{
+  max-width: var(--max-width);
 }
 
 .about__item {
@@ -612,6 +374,7 @@
 }
 
 .about__item__img {
+  background-color: #ff6600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -624,11 +387,14 @@
 
 .about__item__img img {
   width: 60%;
-  filter: var(--filter-color);
 }
 
 .about__item__text {
   font-size: 18px;
+}
+
+.col-about > div:nth-child(4) {
+  padding-top: 1.6rem;
 }
 
 /* FOOTER */
@@ -667,6 +433,292 @@
   margin: 10px;
 }
 
+/* DEVICES */
+@media screen and (max-width: 576px) {
+  
+
+  .search {
+    background-color: var(--primary-color);
+    margin-top: 2rem;
+    padding: 30px 10px;
+  }
+
+  .search__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search__places,
+  .search__dates {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; 
+  }
+
+  .search__input-container {
+    position: relative;
+    background-color: white;
+    margin-bottom: 10px; 
+  }
+
+  .search__input-container label {
+    position: absolute;
+    padding: 3px 3px;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 10px;
+    color: grey;
+    top: -3px; 
+  }
+
+  .searc__icon {
+    position: absolute;
+    bottom: 20%;
+    right: 13px;
+    width: 20px;
+  }
+
+  .search input {
+    height: 40px; 
+    border-radius: none;
+  }
+
+  .search input::placeholder {
+    position: relative;
+    left: -1px
+  }
+
+  .search button {
+    height: 40px !important; 
+    width: 100%;
+    max-width: 500px; 
+
+    background-color: seagreen;
+  }
+
+ .incentive_title{
+  margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+ }
+
+ .col-incetive_2{
+  margin-bottom: 4rem;
+ }
+
+ .about__item__text b{
+padding: auto;
+margin: 0 auto;
+height: 100%;
+width: 100%;
+text-align: center;
+ }
+
+ .about__item__img{
+  width: 100px; 
+  height: 100px;
+ }
+ .about__item__img img {
+  width: 60px;
+  height: 60px; 
+}
+  
+  .bus-routes_title{
+    margin-top: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .col-routes a:nth-child(n+7) {
+    margin: 3rem;
+    display: none;
+  }
+
+  .bus-routes_row{
+    margin-bottom: 1.5rem;
+  }
+
+  .payment-method_col_2{
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .col-companies-img img:nth-child(n+4) {
+    display: none;
+  }
+
+  /* COMPANIES */
+
+  .companies__container {
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 8px;
+grid-row-gap: 8px;
+  }
+
+  .companies__container img:nth-child(n+7) {
+    display: none;
+  }
+
+
+  /* COMPANIES AND PAYMENT  */
+  .payment-method, .section-companies{
+    border-radius: 0px;
+    margin: 0 ;
+  }
+
+}
+
+@media (768px <=  width < 992px) {
+  /* SEARCH */
+  .search {
+    background-color: var(--primary-color);
+    max-width: 100%;
+    padding: 70px 10px 0 10px;
+  }
+
+  .search__input-container{
+    margin-bottom: 10px; 
+  }
+
+  .search input::placeholder {
+    position: relative;
+    left: -1px
+  }
+
+  .search button {
+    height: 40px; 
+    width: 100%;
+    max-width: 500px; 
+    margin-bottom: 10px;
+    background-color: seagreen;
+  }
+
+  /* INCENTIVE */
+  .section-incentive_row{
+    margin: 2rem ;
+  }
+
+  .incentive_title{
+    margin-top: 1rem;
+  }
+
+  .about__item__img{
+    width: 100px;
+    height: 100px;
+   }
+   .about__item__img img {
+    width: 60px; 
+    height: 60px;
+  }
+
+  /* BUS ROUTES */
+  .bus-routes_title{
+    margin-top: 1rem;
+  }
+
+  .bus-routes_row{
+    margin-bottom: 1rem;
+  }
+
+  /* COMPANIES AND PAYMENT  */
+  .payment-method, .section-companies{
+    border-radius: 0px;
+    margin: 0 ;
+  }
+
+  .companies__container{
+    display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 8px;
+grid-row-gap: 8px;
+  }
+
+  .companies__container img:nth-child(n+11) {
+    display: none;
+  }
+
+}
+
+@media (992px <=  width < 1200px) {
+  
+  /* SEARCH */
+  .search {
+    background-color: var(--primary-color);
+    max-width: 100%;
+    padding: 70px 10px 0 10px;
+  }
+
+  .search__input-container{
+    margin-bottom: 10px; 
+  }
+
+  .search input::placeholder {
+    position: relative;
+    left: -1px
+  }
+
+  .search button {
+    height: 40px; 
+    width: 100%;
+    max-width: 500px; 
+    margin-bottom: 10px;
+    background-color: seagreen;
+  }
+
+  /* INCENTIVE */
+  .section-incentive_row{
+    margin: 2rem ;
+  }
+
+  .incentive_title{
+    margin-top: 1rem;
+  }
+
+  .about__item__img{
+    width: 100px; 
+    height: 100px;
+   }
+   .about__item__img img {
+    width: 60px; 
+    height: 60px; 
+  }
+
+   /* PAYMENT METHODS  */
+
+  .payment-method, .section-companies{
+    border-radius: 0px;
+    margin-bottom: 0;
+  }
+
+  /* BUS-ROUTES */
+  .bus-routes_title{
+    margin-top: 1rem;
+  }
+
+  .bus-routes_row{
+    margin-bottom: 1rem;
+  }
+
+  /* ABOUTUS */
+
+  .section-companies__col-2-level{
+    display: flex;
+  }
+
+}
+
 @media screen and (min-width: 1000px) {
   .navbar_item {
     display: inline-block;
@@ -693,27 +745,6 @@
     height: 100%;
   }
 
-  /* WARNING */
-  .warning {
-    display: flex;
-    max-width: var(--max-width);
-    margin: 50px auto;
-  }
-
-  .warning img:last-child {
-    position: relative;
-    left: 0;
-  }
-
-  .warning img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .warning__container {
-    padding: 0 30px;
-  }
-
   /* PAYMENT METHODS */
   .payment-method {
     max-width: var(--max-width);
@@ -732,37 +763,6 @@
     display: inline-block;
   }
 
-  /* SERVICES */
-  .services {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .services__info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    max-width: var(--max-width);
-  }
-
-  .services__info__benefits {
-    grid-row: 1 / 3;
-  }
-
-  .info__more__container {
-    min-height: 100%;
-  }
-
-  .services__sits {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    max-width: var(--max-width);
-  }
-
   /* ABOUTUS */
   .about__container {
     flex-direction: row;
@@ -774,35 +774,6 @@
   .about__item__img {
     width: 100px;
     height: 100px;
-  }
-
-  /*  DESTINATION */
-  .destination {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: var(--max-width);
-    margin: auto;
-  }
-
-  .destination__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .destination__grid {
-    width: 100%;
-  }
-
-  .destination__item {
-    height: 250px;
-  }
-
-  .destination__item__btn {
-    width: max-content;
   }
 
   /* FOOTER */
@@ -824,6 +795,19 @@
   }
 }
 
+
+@media  screen and (max-width: 1200px) {
+
+  .section-companies__col-2-level{
+    display: flex;
+  }
+
+  .payment-method, .section-companies{
+    border-radius: 0px;
+    margin: 0 ;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   /* SEARCH */
   .search {
@@ -831,7 +815,7 @@
     position: -webkit-sticky;
     top: calc(
       10px + var(--nav-bar-height)
-    ); /* Dejarlo fijo en la parte inferior */
+    ); 
     z-index: 800;
     bottom: 10px;
     flex-direction: column;
@@ -839,9 +823,6 @@
     gap: 0;
     max-width: var(--max-width);
     margin: 50px auto;
-    padding: 10px 30px;
-    border-radius: 70px;
-    border: 1px solid #0004;
     box-shadow: 0 0 10px 5px #0002;
     background-color: white;
   }
@@ -857,26 +838,22 @@
   .seach__form {
     flex-direction: row;
     align-items: center;
-    gap: 10px;
   }
 
   .search__places,
   .search__dates {
     flex-grow: 1;
     flex-direction: row;
-    gap: 10px;
+    
     box-shadow: none;
   }
 
   .search__input-container {
     flex-grow: 1;
-    outline: 1px solid var(--border-color);
-    border-radius: 50px;
   }
 
   .search__input-container label,
   .search__input-container input {
-    padding-left: 30px;
     padding-right: 30px;
   }
 
@@ -887,5 +864,8 @@
   #search__submit {
     max-width: 200px;
     height: 50px;
+    background-color: #ff6600;
   }
+
 }
+

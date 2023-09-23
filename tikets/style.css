@@ -6,7 +6,7 @@
   --bg-gray: #f1f1f1;
   --bg-green: #28a745;
   --shadow: 0 0 15px 5px #0002;
-  --nav-bar-height: 60px;
+  --nav-bar-height: 80px;
   --max-width: 1200px;
 }
 .bg-white-rounded{
@@ -51,6 +51,7 @@
 /* NAVBAR */
 .navbar {
   position: sticky;
+  position: -webkit-sticky;
   z-index: 1000;
   width: 100%;
   height: var(--nav-bar-height);
@@ -489,7 +490,7 @@ margin: 5px 0;
   align-items: flex-start;
 }
 .div_forma_pago{
-  width: fit-content;
+  width: content;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

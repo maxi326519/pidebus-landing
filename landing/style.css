@@ -395,6 +395,15 @@ body {
   padding-top: 1.6rem;
 }
 
+/* COMPANIES */
+.view-more {
+  border: none;
+  color: var(--primary-color);
+  margin: 10px;
+  font-size: 20px;
+  background-color: inherit;
+}
+
 /* FOOTER */
 .footer {
   padding: 20px;

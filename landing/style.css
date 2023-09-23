@@ -10,7 +10,8 @@
   --max-width: 1200px;
 }
 
-html, body {
+html,
+body {
   width: 100%;
 }
 
@@ -133,7 +134,7 @@ body {
 .menu-btn_burger,
 .menu-btn_burger:after,
 .menu-btn_burger:before {
-  width: 40px;
+  width: 45px;
   height: 4px;
   border-radius: 5px;
   background-color: var(--primary-color);
@@ -143,14 +144,14 @@ body {
 .menu-btn_burger:after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 15px;
   transition: 0.2s;
 }
 
 .menu-btn_burger:before {
   content: "";
   position: absolute;
-  bottom: 5px;
+  bottom: 15px;
   transition: 0.2s;
 }
 
@@ -174,7 +175,7 @@ body {
 .menu {
   position: absolute;
   z-index: 1000;
-  top: 60px;
+  top: 90px;
   right: 0;
   display: none;
   opacity: 0;
@@ -215,8 +216,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%
- 
+  height: 100%;
 }
 
 .search__title {
@@ -230,13 +230,11 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 500px;
-  
 }
 
 .search__input-container {
   position: relative;
   background-color: white;
-  
 }
 
 .search__input-container label {
@@ -262,7 +260,7 @@ body {
 }
 
 .search input::placeholder {
- position: relative;
+  position: relative;
   left: 1rem;
 }
 
@@ -303,16 +301,16 @@ body {
 
 /* BUS ROUTES */
 
-.bus-routes{
+.bus-routes {
   max-width: var(--max-width);
 }
 
-.col-routes{
-  flex: 1; 
+.col-routes {
+  flex: 1;
   align-items: baseline center;
 }
 
-.col-routes a{
+.col-routes a {
   margin: 10px 0;
   text-decoration: none;
   color: var(--primary-color);
@@ -338,7 +336,7 @@ body {
   grid-row-gap: 6px;
   justify-content: center;
   align-items: center;
-  justify-items: center; 
+  justify-items: center;
 }
 
 .companies__container img {
@@ -347,7 +345,7 @@ body {
   width: 8rem;
   margin: 0 auto;
   place-content: center;
-  justify-self: center; 
+  justify-self: center;
 }
 
 /* ABOUTUS */
@@ -361,7 +359,7 @@ body {
   color: var(--primary-color);
 }
 
-.col-about{
+.col-about {
   max-width: var(--max-width);
 }
 
@@ -435,8 +433,6 @@ body {
 
 /* DEVICES */
 @media screen and (max-width: 576px) {
-  
-
   .search {
     background-color: var(--primary-color);
     margin-top: 2rem;
@@ -455,13 +451,13 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: 500px;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 
   .search__input-container {
     position: relative;
     background-color: white;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
   .search__input-container label {
@@ -471,7 +467,7 @@ body {
     margin: 0;
     font-size: 10px;
     color: grey;
-    top: -3px; 
+    top: -3px;
   }
 
   .searc__icon {
@@ -482,51 +478,51 @@ body {
   }
 
   .search input {
-    height: 40px; 
+    height: 40px;
     border-radius: none;
   }
 
   .search input::placeholder {
     position: relative;
-    left: -1px
+    left: -1px;
   }
 
   .search button {
-    height: 40px !important; 
+    height: 40px !important;
     width: 100%;
-    max-width: 500px; 
+    max-width: 500px;
 
     background-color: seagreen;
   }
 
- .incentive_title{
-  margin-top: 1rem;
+  .incentive_title {
+    margin-top: 1rem;
     padding: 1rem;
     font-size: 1.2rem;
- }
+  }
 
- .col-incetive_2{
-  margin-bottom: 4rem;
- }
+  .col-incetive_2 {
+    margin-bottom: 4rem;
+  }
 
- .about__item__text b{
-padding: auto;
-margin: 0 auto;
-height: 100%;
-width: 100%;
-text-align: center;
- }
+  .about__item__text b {
+    padding: auto;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
 
- .about__item__img{
-  width: 100px; 
-  height: 100px;
- }
- .about__item__img img {
-  width: 60px;
-  height: 60px; 
-}
-  
-  .bus-routes_title{
+  .about__item__img {
+    width: 100px;
+    height: 100px;
+  }
+  .about__item__img img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bus-routes_title {
     margin-top: 1rem;
     padding: 1rem;
     justify-content: center;
@@ -534,16 +530,16 @@ text-align: center;
     font-size: 1.2rem;
   }
 
-  .col-routes a:nth-child(n+7) {
+  .col-routes a:nth-child(n + 7) {
     margin: 3rem;
     display: none;
   }
 
-  .bus-routes_row{
+  .bus-routes_row {
     margin-bottom: 1.5rem;
   }
 
-  .payment-method_col_2{
+  .payment-method_col_2 {
     display: flex;
     flex-direction: column !important;
     justify-content: center;
@@ -552,7 +548,7 @@ text-align: center;
     margin: 0 auto;
   }
 
-  .col-companies-img img:nth-child(n+4) {
+  .col-companies-img img:nth-child(n + 4) {
     display: none;
   }
 
@@ -560,26 +556,25 @@ text-align: center;
 
   .companies__container {
     display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(3, 1fr);
-grid-column-gap: 8px;
-grid-row-gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
   }
 
-  .companies__container img:nth-child(n+7) {
+  .companies__container img:nth-child(n + 7) {
     display: none;
   }
 
-
   /* COMPANIES AND PAYMENT  */
-  .payment-method, .section-companies{
+  .payment-method,
+  .section-companies {
     border-radius: 0px;
-    margin: 0 ;
+    margin: 0;
   }
-
 }
 
-@media (768px <=  width < 992px) {
+@media (768px <= width < 992px) {
   /* SEARCH */
   .search {
     background-color: var(--primary-color);
@@ -587,72 +582,71 @@ grid-row-gap: 8px;
     padding: 70px 10px 0 10px;
   }
 
-  .search__input-container{
-    margin-bottom: 10px; 
+  .search__input-container {
+    margin-bottom: 10px;
   }
 
   .search input::placeholder {
     position: relative;
-    left: -1px
+    left: -1px;
   }
 
   .search button {
-    height: 40px; 
+    height: 40px;
     width: 100%;
-    max-width: 500px; 
+    max-width: 500px;
     margin-bottom: 10px;
     background-color: seagreen;
   }
 
   /* INCENTIVE */
-  .section-incentive_row{
-    margin: 2rem ;
+  .section-incentive_row {
+    margin: 2rem;
   }
 
-  .incentive_title{
+  .incentive_title {
     margin-top: 1rem;
   }
 
-  .about__item__img{
+  .about__item__img {
     width: 100px;
     height: 100px;
-   }
-   .about__item__img img {
-    width: 60px; 
+  }
+  .about__item__img img {
+    width: 60px;
     height: 60px;
   }
 
   /* BUS ROUTES */
-  .bus-routes_title{
+  .bus-routes_title {
     margin-top: 1rem;
   }
 
-  .bus-routes_row{
+  .bus-routes_row {
     margin-bottom: 1rem;
   }
 
   /* COMPANIES AND PAYMENT  */
-  .payment-method, .section-companies{
+  .payment-method,
+  .section-companies {
     border-radius: 0px;
-    margin: 0 ;
+    margin: 0;
   }
 
-  .companies__container{
+  .companies__container {
     display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 8px;
-grid-row-gap: 8px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
   }
 
-  .companies__container img:nth-child(n+11) {
+  .companies__container img:nth-child(n + 11) {
     display: none;
   }
-
 }
 
-@media (992px <=  width < 1200px) {
-  
+@media (992px <= width < 1200px) {
   /* SEARCH */
   .search {
     background-color: var(--primary-color);
@@ -660,63 +654,63 @@ grid-row-gap: 8px;
     padding: 70px 10px 0 10px;
   }
 
-  .search__input-container{
-    margin-bottom: 10px; 
+  .search__input-container {
+    margin-bottom: 10px;
   }
 
   .search input::placeholder {
     position: relative;
-    left: -1px
+    left: -1px;
   }
 
   .search button {
-    height: 40px; 
+    height: 40px;
     width: 100%;
-    max-width: 500px; 
+    max-width: 500px;
     margin-bottom: 10px;
     background-color: seagreen;
   }
 
   /* INCENTIVE */
-  .section-incentive_row{
-    margin: 2rem ;
+  .section-incentive_row {
+    margin: 2rem;
   }
 
-  .incentive_title{
+  .incentive_title {
     margin-top: 1rem;
   }
 
-  .about__item__img{
-    width: 100px; 
+  .about__item__img {
+    width: 100px;
     height: 100px;
-   }
-   .about__item__img img {
-    width: 60px; 
-    height: 60px; 
+  }
+  .about__item__img img {
+    width: 60px;
+    height: 60px;
   }
 
-   /* PAYMENT METHODS  */
+  /* PAYMENT METHODS  */
 
-  .payment-method, .section-companies{
+  .payment-method,
+  .section-companies {
     border-radius: 0px;
     margin-bottom: 0;
   }
 
   /* BUS-ROUTES */
-  .bus-routes_title{
+  .bus-routes_title {
     margin-top: 1rem;
   }
 
-  .bus-routes_row{
+  .bus-routes_row {
     margin-bottom: 1rem;
   }
 
   /* ABOUTUS */
 
-  .section-companies__col-2-level{
+  .section-companies__col-2-level {
     display: flex;
   }
-
 }
 
 @media screen and (min-width: 1000px) {
@@ -795,16 +789,15 @@ grid-row-gap: 8px;
   }
 }
 
-
-@media  screen and (max-width: 1200px) {
-
-  .section-companies__col-2-level{
+@media screen and (max-width: 1200px) {
+  .section-companies__col-2-level {
     display: flex;
   }
 
-  .payment-method, .section-companies{
+  .payment-method,
+  .section-companies {
     border-radius: 0px;
-    margin: 0 ;
+    margin: 0;
   }
 }
 
@@ -813,9 +806,7 @@ grid-row-gap: 8px;
   .search {
     position: sticky;
     position: -webkit-sticky;
-    top: calc(
-      10px + var(--nav-bar-height)
-    ); 
+    top: calc(10px + var(--nav-bar-height));
     z-index: 800;
     bottom: 10px;
     flex-direction: column;
@@ -844,7 +835,7 @@ grid-row-gap: 8px;
   .search__dates {
     flex-grow: 1;
     flex-direction: row;
-    
+
     box-shadow: none;
   }
 
@@ -866,6 +857,4 @@ grid-row-gap: 8px;
     height: 50px;
     background-color: #ff6600;
   }
-
 }
-

@@ -66,83 +66,90 @@ const cardsContainer = document.querySelector(".cards");
 function crearTarjeta(viaje) {
   const card = document.createElement("div");
   card.className = "card__pidebus";
-  // Crea la estructura de la tarjeta y agrega datos dinámicos
-  const buttonCollapse = document.getElementById("buttonCollapse");
-  const colFilter = document.getElementById("colFilters");
-  const filterColapseButton = document.getElementById("filterCollapse");
+  // ESCUCHA EL TAMAÑO DE LA PANTALLA PARA AGREGAR EL DISEÑO MOBILE
   function handleResize() {
     if (window.innerWidth <= 576) {
-      buttonCollapse.classList.remove("d-none");
-      filterColapseButton.classList.add("filters");
       card.innerHTML = `
       <div class="row w-100 w-full">
-      <div class="col-sm-12 d-flex justify-content-between">
+      <div class="col-sm-12 d-flex justify-content-between mt-2 mb-3">
         <span>${viaje.empresa}</span>
         <span>S/ ${viaje.precio}</span>
       </div>
-    
-      <div class="col-sm-12">
-        <div class="row d-flex flex-column">
-          <div class="col-sm-12 d-flex flex-column">
-          <div class="row d-flex justify-content-between">
-          <div class="d-flex flex-column">
-          <span>${viaje.fechaSalida}</span>
-          <div class="d-flex">
-          <span>${viaje.horaSalida}</span>
-          <span>${viaje.codigoSalida}</span></div>
-        </div>
-
-        <div class="d-flex flex-column">
-          <span>${viaje.terminalSalida}</span>
-
-        </div>
-
+      <div class="col-sm-12 d-flex justify-content-between w-full w-100">
+        <div class="d-flex flex-col justify-content-start align-items-center card w-100 w-full">
+          <div class="d-flex flex-row justify-content-start align-items-center width-100 px-2 pb-2">
+            <div class="timeline">
+              <div class="event">
+                <div class="time font-weight-bold">09:00 AM</div>
+                <div class="connector"></div>
+                <div class="icon">Arequipa <br> <span class="text-xs-gray">Terminal</span></div>
+              </div>
+              <div class="middle-line"></div>
+              <div class="event">
+                <div class="time font-weight-bold">03:00 PM</div>
+                <div class="connector"></div>
+                <div class="icon">Lima <br> <span class="text-xs-gray">Altocongo</span></div>
+              </div>
+            </div>
           </div>
-           
+          <div class="d-flex flex-row width-100 justify-content-start align-items-start gap-10 pl-2 pr-2 pb-2">
+            <span class="text-xs-black">0 Escalas</span>
+            <span class="text-xs-black">16:34m</span>
+            <span class="text-xs-black">3 Pasajeros</span>
           </div>
-    
-          <div class="col-sm-12 d-flex flex-column">
-          <div class="row d-flex justify-content-between">
-          <div class="d-flex flex-column">  <span>${viaje.fechaLlegada}</span>
-          <div class= "d-flex">
-            <span>${viaje.horaLlegada}</span>
-            <span>${viaje.codigoLlegada}</span>
-          </div></div>
-         
-
-            <div class="d-flex flex-column">
-            <span>${viaje.terminalLlegada}</span>
+        </div>
   
-          </div>
-          </div>
+  
+      </div>
+
+       <div class="col-sm-12 d-flex flex-row w-100 justify-content-start align-items-center py-2 div_limites_all">
+        <div class="div_forma_pago">
+          <div style="background-color: rgb(0, 0, 121);" class="line_vertical_formas_pago"></div>
+          <span class="text-xs-black">BBVA</span>
+        </div>
+        <div class="div_forma_pago">
+          <div style="background-color: rgb(88, 0, 88);" class="line_vertical_formas_pago"></div>
+          <span class="text-xs-black">Yape</span>
+        </div>
+        <div class="div_forma_pago">
+          <div style="background-color: rgb(0, 0, 209);" class="line_vertical_formas_pago"></div>
+          <span class="text-xs-black">Plin</span>
+        </div>
+        <div class="div_forma_pago">
+          <div style="background-color: green;" class="line_vertical_formas_pago"></div>
+          <span class="text-xs-black">Interbank</span>
+        </div>
+        <div class="div_forma_pago">
+          <div style="background-color: rgb(0, 0, 53);" class="line_vertical_formas_pago"></div>
+          <span class="text-xs-black">Credit Bank of Peru</span>
         </div>
       </div>
-    
-      <div class="col-sm-12">
-      <div class="d-flex justify-content-between w-100 w-full m-auto">
-      <div>
-${viaje.tipoAsiento},${viaje.reembolsable ? "Reembolsable" : ""}
-  </div>
-  <button  type="button" data-toggle="collapse" data-target="#collapse-${
-    viaje.id
-  }" aria-expanded="false" aria-controls="collapse-${
+  
+      <div class="col-sm-12 w-full w-100 m-auto">
+  <div class="d-flex justify-content-between w-100 w-full m-auto m-auto align-items-center">
+    <div class="text-xs">
+      ${viaje.tipoAsiento} ${viaje.reembolsable ? "Reembolsable" : ""}
+    </div>
+    <button type="button" data-toggle="collapse" data-target="#collapse-${
+      viaje.id
+    }" aria-expanded="false" aria-controls="collapse-${
         viaje.id
       }" class="btn btn_naranja btn_ver">
-    <div class="d-flex flex-row align-items-center justify-content-center">
-      <span class="color-white ml-1 font-weight-bold">Ver Asientos</span>
-    </div>
-  </button>
+      <div class="d-flex flex-row align-items-center justify-content-center" style="white-space: nowrap;">
+        <span class="color-white ml-1 font-weight-bold">Ver Asientos</span>
       </div>
-      </div>
+    </button>
+  </div>
+</div>
+  
+     
     </div>
-
+  
       `;
     }
     if (window.innerWidth >= 768 && window.innerWidth < 992) {
-      buttonCollapse.classList.add("d-none");
-      colFilter.classList.remove("d-none");
-
       card.innerHTML = `
+
       <div class="div__card">
         <span class="e__tick mb-2">${viaje.empresa}</span>
         <img src="./assets/img/icon.png" alt="alt-img" srcset="./assets/img/icon.png" width="100px">
@@ -371,57 +378,60 @@ ${viaje.tipoAsiento},${viaje.reembolsable ? "Reembolsable" : ""}
   // Agregar un evento de cambio de tamaño de ventana
   window.addEventListener("resize", handleResize);
 
-  // Para asegurarte de que el valor inicial sea correcto, puedes ejecutar handleResize() una vez al cargar la página.
   handleResize();
 
   const tarjeta = document.createElement("div");
   tarjeta.className = "ver__asientos  w-100";
-
+  // ESCUCHA EL TAMAÑO DE LA PANTALLA PARA AGREGAR EL DISEÑO MOBILE
   if (window.innerWidth <= 576) {
     tarjeta.innerHTML = `
-    <div class="d-flex flex-column justify-content-centen aling-items-center m-auto">
-    <div class="flex-row w-100 w-full p-2 bg-white-rounded justify-content-center align-items-center  collapse tarjetas_collapsed " id="collapse-${viaje.id}">
-    <div class="asientosw-100">
-    <div class="d-flex flex-row w-100 justify-content-start align-items-center mb-2">
-      <div class="icon__user mr-2">
-        <img class="user__img" src="./assets/img/user-img.jpg" alt="user-img">
-        <div class="online"></div>
-      </div>
-      <div class="user_stats">
-        <div class="d-flex flex-column w-100 justify-content-start">
-          <div class="d-flex flex-row justify-content-start align-items-center">
-            <span class="mr-3 user_name">Name</span>
-            <div class="p-1 user_likes">
-              <span>94,50%</span>
+
+    <div class="d-flex flex-column justify-content-centen aling-items-center m-auto ">
+    <div class="row d-flex flex-column">
+    <div
+      class="flex-row flex-column w-100 w-full p-2 bg-white-rounded justify-content-center align-items-center collapse  tarjetas_collapsed "
+      id="collapse-${viaje.id}">
+      <div class="col-sm-12 mt-3">  <div class="asientosw-100">
+        <div class="d-flex flex-row w-100 justify-content-start align-items-center mb-2">
+          <div class="icon__user mr-2">
+            <img class="user__img" src="./assets/img/user-img.jpg" alt="user-img">
+            <div class="online"></div>
+          </div>
+          <div class="user_stats">
+            <div class="d-flex flex-column w-100 justify-content-start">
+              <div class="d-flex flex-row justify-content-start align-items-center">
+                <span class="mr-3 user_name">Name</span>
+                <div class="p-1 user_likes">
+                  <span>94,50%</span>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-start align-items-center ordenes">
+                <span>Órdenes 2922</span>
+                <div class="line_vertical"></div>
+                <span>95,70% Promedio</span>
+              </div>
             </div>
           </div>
-          <div class="d-flex flex-row justify-content-start align-items-center ordenes">
-            <span>Órdenes 2922</span>
-            <div class="line_vertical"></div>
-            <span>95,70% Promedio</span>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="width-100 w-full">
+        <div class="width-100 w-full">
           <div class="d-flex flex-column justify-content-start align-items-center p-3 bus">
             <div class="first_floor">
               <div class="text-align-center title_first_floor">Primer piso - 160°</div>
             </div>
             <div class="first_floor_mid">
               <div class="parent">
-                  <div class="div1 grid-item">1 </div>
-                  <div class="div2 grid-item">2 </div>
-                  <div class="div3 grid-item">3 </div>
-                  <div class="div4 grid-item">4 </div>
-                  <div class="div5 grid-item selected">5 </div>
-                  <div class="div6 grid-item">6 </div>
-                  <div class="div7 grid-item used">X </div>
-                  <div class="div8 grid-item used">X </div>
-                  <div class="div9 grid-item selected">9</div>
-                  <div class="div10 grid-item selected">10 </div>
-                  <div class="div11 grid-item">11 </div>
-                  <div class="div12 grid-item">12 </div>
+                <div class="div1 grid-item">1 </div>
+                <div class="div2 grid-item">2 </div>
+                <div class="div3 grid-item">3 </div>
+                <div class="div4 grid-item">4 </div>
+                <div class="div5 grid-item selected">5 </div>
+                <div class="div6 grid-item">6 </div>
+                <div class="div7 grid-item used">X </div>
+                <div class="div8 grid-item used">X </div>
+                <div class="div9 grid-item selected">9</div>
+                <div class="div10 grid-item selected">10 </div>
+                <div class="div11 grid-item">11 </div>
+                <div class="div12 grid-item">12 </div>
               </div>
             </div>
             <div class="first_floor_final mb-2">
@@ -455,16 +465,80 @@ ${viaje.tipoAsiento},${viaje.reembolsable ? "Reembolsable" : ""}
                 <div class="div21-second grid-item"> 30</div>
                 <div class="div22-second grid-item"> 31</div>
                 <div class="div23-second grid-item"> 32</div>
-                </div>
+              </div>
             </div>
             <div class="first_floor_final">
               <div class="title_first_floor_final"></div>
             </div>
           </div>
         </div>
+      </div></div>
+     
+      <div class="col-sm-12 mt-3"> <div class="d-flex flex-col justify-content-center align-items-center card">
+        <span class="font-weight-bold pt-2 text-xl">SU SELECCIÓN DE VIAJE</span>
+        <div class="line" style="width: 100%;"></div>
+        
+        <div class="d-flex flex-row width-100 justify-content-center align-items-start gap-10 pl-2 pr-2 pb-2">
+          <span class="text-xl-black">0 Escalas</span>
+          <span class="text-xl-black">16:34m</span>
+          <span class="text-xl-black">3 Pasajeros</span>
+        </div>
+      </div> </div>
+      <div class="col-sm-12 mt-3">
+        <div class="d-flex flex-col justify-content-start align-items-center card">
+          <span class="font-weight-bold pt-2 text-xl">TUS ASIENTOS</span>
+          <div class="line" style="width: 100%;"></div>
+          <div class="d-flex flex-column justify-content-start align-items-center width-100 px-2">
+            <div class="d-flex flex-row justify-content-between align-items-center width-100 gap-10">
+              <p><span class="text-xl-black font-weight-bold">reclinación 160°</span></p>
+              <p>S/ 110</p>
+            </div>
+            <div class="d-flex flex-row justify-content-between align-items-center width-100 gap-10">
+              <p><span class="text-xl-black font-weight-bold">reclinación 160°</span></p>
+              <p>S/ 110</p>
+            </div>
+            <div class="d-flex flex-row justify-content-between align-items-center width-100 gap-10">
+              <p><span class="text-xl-black font-weight-bold">reclinación 160°</span></p>
+              <p>S/ 110</p>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="d-flex flex-row width-100 justify-content-between align-items-start gap-10 pl-2 pr-2 pb-2">
+            <div class="d-flex flex-column justify-content-start align-items-start">
+              <span class="font-weight-bold text-xl">TOTAL</span>
+              <span class="text-xs-gray">Tasas y impuestos incluidos</span>
+            </div>
+            <span class="font-weight-bold">S/ 330</span>
+          </div>
+        </div>
+        
+        <div class="d-flex flex-row justify-content-between align-items-center width-100 gap-10 mt-3">
+          <button class="btn btn_gris" type="button">
+            <div class="d-flex flex-row align-items-center justify-content-center">
+              <span class="color-white ml-1 font-weight-bold text-xs-black">Cancelar</span>
+            </div>
+          </button>
+          <button class="btn btn_green" type="button">
+            <div class="d-flex flex-row align-items-center justify-content-center">
+              <span class="color-white ml-1 font-weight-bold">Reservar</span>
+            </div>
+          </button>
+        </div>
+    
+
       </div>
-  </div>
+     
     </div>
+    </div>
+  </div>
+   
+
+  
+    
+ 
+
+
+   
     `;
   } else {
     tarjeta.innerHTML = `
@@ -745,3 +819,60 @@ datosViaje.forEach((viaje) => {
   const tarjeta = crearTarjeta(viaje);
   cardsContainer.appendChild(tarjeta);
 });
+
+//LOGICA PARA ORDENAR (HORARIO - PRECIO - EMPRESA)
+const ordenarBotones = document.querySelectorAll(".ordenar-btn");
+
+// Agrega controladores de eventos a los botones de ordenamiento
+ordenarBotones.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const criterio = boton.getAttribute("data-ordenar");
+    ordenarTarjetas(criterio);
+  });
+});
+
+function ordenarTarjetas(criterio) {
+  // Clona y ordena el arreglo de datosViaje según el criterio
+  const datosOrdenados = [...datosViaje];
+  switch (criterio) {
+    case "horarios":
+      datosOrdenados.sort((a, b) => {
+        return compararHorarios(a.horaSalida, b.horaSalida);
+      });
+      break;
+    case "empresa":
+      datosOrdenados.sort((a, b) => {
+        return a.empresa.localeCompare(b.empresa);
+      });
+      break;
+    case "precios":
+      datosOrdenados.sort((a, b) => {
+        return a.precio - b.precio;
+      });
+      break;
+    default:
+      break;
+  }
+
+  // Limpia el contenedor de tarjetas
+  const tarjetasContainer = document.querySelector(".cards");
+  tarjetasContainer.innerHTML = "";
+
+  // Crea y muestra las tarjetas ordenadas
+  datosOrdenados.forEach((viaje) => {
+    const tarjeta = crearTarjeta(viaje); // Crea una tarjeta con tus datos
+    tarjetasContainer.appendChild(tarjeta);
+  });
+}
+
+// Función para comparar horarios en formato "HH:MM"
+function compararHorarios(horaA, horaB) {
+  const [hora1, minuto1] = horaA.split(":").map(Number);
+  const [hora2, minuto2] = horaB.split(":").map(Number);
+
+  if (hora1 !== hora2) {
+    return hora1 - hora2;
+  }
+
+  return minuto1 - minuto2;
+}

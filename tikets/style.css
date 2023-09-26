@@ -199,6 +199,8 @@
   display: none;
 }
 
+
+
 /* CARDS */
 .bg__gray{
   display: block;
@@ -472,8 +474,8 @@ margin: 5px 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #000; /* Puedes ajustar el color aquí */
-  margin-top: 5px; /* Ajusta el espaciado entre el texto y la flecha */
+  border-top: 5px solid #000;
+  margin-top: 5px; 
 }
 .ordenes{
   font-size: 14px;
@@ -827,6 +829,136 @@ margin: 5px 0;
   margin: 10px;
 }
 
+/* ORDENAMIENTO */
+
+
+.cl {
+  height:50px;
+  padding:10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-color: #000 !important;
+  border-radius: 1px solid black !important;
+  overflow: hidden !important;
+  background-color: white !important;
+}
+
+.cl-yellow { 
+  /* background: #f1c40f;  */
+  border-color: #000 !important;
+  border-radius: 1px solid black !important;
+}
+
+.cl-blue { 
+  background: #3498db; 
+}
+
+.cl-red { 
+  background: #e74c3c; 
+}
+
+.slick-active { 
+  padding: 20px 0; 
+}
+
+.slick-center { 
+  transform: scale(1.20);
+font-size: 1.1rem;
+}
+
+.slick-slide:not(.slick-active) { 
+  margin: 20px 0; 
+}
+
+.child { 
+  width:100%; 
+}
+
+.slide:not(.slick-active) { 
+  cursor: pointer; 
+}
+
+.slick-next, .slick-arrow{
+  display: none;
+}
+
+.ordenamiento-bar {
+  margin: 0 0.8rem;
+  color: #000000; 
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.ordenar-btn {
+  background-color: #555; 
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ordenar-btn:hover {
+  background-color: #777; 
+}
+
+
+/* DEVICES */
+
+/* Small (SM) - Pantallas mayores o iguales a 576px */
+@media screen and (max-width: 576px) {
+  .card__pidebus{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card{
+    border: 0 !important;
+
+  }
+
+  .middle-line {
+    position: absolute;
+    top: 30px;
+    left: 39%;
+    width: 2px;
+    height: 23%;
+    background-color: #e0e0e0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+
+  .ordenamiento-bar {
+    display: none !important;
+  }
+
+  .slider {
+    display: none !important;
+  }
+  
+}
+
+/* Medium (MD) - Pantallas mayores o iguales a 768px */
+@media (768px <=  width < 992px) {
+.filters .checkbox__list{
+ display: flex;
+ flex-wrap: wrap;
+}
+}
+
+/* Large (LG) - Pantallas mayores o iguales a 992px */
+@media (992px <=  width < 1200px) {
+
+
+}
+
 @media screen and (min-width: 1000px) {
   .navbar_item {
     display: inline-block;
@@ -1050,32 +1182,4 @@ margin: 5px 0;
     max-width: 200px;
     height: 50px;
   }
-}
-
-/* DEVICES */
-
-/* Small (SM) - Pantallas mayores o iguales a 576px */
-@media screen and (max-width: 576px) {
-  .card__pidebus{
-    display: flex;
-    flex-direction: column;
-  }
-  
-}
-
-/* Medium (MD) - Pantallas mayores o iguales a 768px */
-@media (768px <=  width < 992px) {
-
-}
-
-/* Large (LG) - Pantallas mayores o iguales a 992px */
-@media (992px <=  width < 1200px) {
-
-
-}
-
-/* Extra large (XL) - Pantallas mayores o iguales a 1200px */
-@media  screen and (max-width: 1200px) {
-  /* Tus estilos para pantallas extra grandes aquí */
-
 }

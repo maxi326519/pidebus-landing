@@ -227,12 +227,14 @@ function generateFilters(data) {
   });
 
   filtersContainer.appendChild(horaLlegadaUl);
+
+  initializeFilters();
 }
 
 // Llama a la función para generar los filtros con los datos de viaje
 generateFilters(datosViaje);
 
-document.addEventListener("DOMContentLoaded", function () {
+function initializeFilters() {
   // Obtén todos los elementos checkbox dentro del contenedor de filtros
   const checkboxes = filtersContainer.querySelectorAll(
     'input[type="checkbox"]'
@@ -347,4 +349,9 @@ document.addEventListener("DOMContentLoaded", function () {
       return "después-de-las-6-pm";
     }
   }
+}
+
+// En tu función "DOMContentLoaded", después de generar los filtros, llama a initializeFilters
+document.addEventListener("DOMContentLoaded", function () {
+  generateFilters(datosViaje);
 });

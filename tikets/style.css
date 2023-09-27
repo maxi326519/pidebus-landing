@@ -1023,6 +1023,14 @@ font-size: 1.1rem;
  display: flex;
  flex-wrap: wrap;
 }
+
+.col-cards{
+  width: 100% !important;
+}
+
+.slider {
+  display: none !important;
+}
 }
 
 /* Large (LG) - Pantallas mayores o iguales a 992px */

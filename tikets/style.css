@@ -201,8 +201,6 @@
   display: none;
 }
 
-
-
 /* CARDS */
 .bg__gray {
   display: block;
@@ -477,7 +475,7 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #000;
-  margin-top: 5px; 
+  margin-top: 5px;
 }
 .ordenes {
   font-size: 14px;
@@ -567,16 +565,39 @@
 
 /* SEARCH */
 .search {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
   background-color: var(--primary-color);
   max-width: 100%;
+  border-radius: 5px !important;
+}
+
+.search-data {
+  display: flex;
+  width: 100%;
+}
+
+.search-data span {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search-data button {
+  background-color: white;
+  width: min-content !important;
+  border: none;
+  transform: rotate(90deg);
+}
+
+.search-data span {
+  border-right: 1px solid var(--primary-color);
 }
 
 .seach__form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  height: 100%;
 }
 
 .search__title {
@@ -590,13 +611,12 @@
   flex-direction: column;
   width: 100%;
   max-width: 500px;
-  gap: 10px;
 }
 
 .search__input-container {
   position: relative;
-  border-radius: 5px;
   background-color: white;
+  border-radius: 5px !important;
 }
 
 .search__input-container label {
@@ -616,16 +636,27 @@
 }
 
 .search input {
-  height: 50px;
+  height: 70px;
   padding-top: 20px;
-  border: none;
+  border-radius: 0px !important;
 }
 
-.search button {
-  border: none;
-  border-radius: 50px;
+.search input::placeholder {
+  position: relative;
+  left: 1rem;
+}
+
+#search__submit {
   width: 100%;
-  max-width: 500px;
+  height: 70px !important;
+}
+
+.search .open {
+  display: flex !important;
+}
+
+.search .close {
+  display: none !important;
 }
 
 .icon_naranja {
@@ -903,10 +934,9 @@
 
 /* ORDENAMIENTO */
 
-
 .cl {
-  height:50px;
-  padding:10px;
+  height: 50px;
+  padding: 10px;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -917,56 +947,62 @@
   background-color: white !important;
 }
 
-.cl-yellow { 
+.cl-yellow {
   /* background: #f1c40f;  */
   border-color: #000 !important;
   border-radius: 1px solid black !important;
 }
 
-.cl-blue { 
-  background: #3498db; 
+.cl-blue {
+  background: #3498db;
 }
 
-.cl-red { 
-  background: #e74c3c; 
+.cl-red {
+  background: #e74c3c;
 }
 
-.slick-active { 
-  padding: 20px 0; 
+.slick-active {
+  padding: 20px 0;
 }
 
-.slick-center { 
-  transform: scale(1.20);
-font-size: 1.1rem;
+.slick-center {
+  transform: scale(1.2);
+  font-size: 1.1rem;
 }
 
-.slick-slide:not(.slick-active) { 
-  margin: 20px 0; 
+.slick-slide:not(.slick-active) {
+  margin: 20px 0;
 }
 
-.child { 
-  width:100%; 
+.child {
+  width: 100%;
 }
 
-.slide:not(.slick-active) { 
-  cursor: pointer; 
+.slide:not(.slick-active) {
+  cursor: pointer;
 }
 
-.slick-next, .slick-arrow{
+.slick-next,
+.slick-arrow {
   display: none;
 }
 
 .ordenamiento-bar {
   margin: 0 0.8rem;
-  color: #000000; 
+  color: #000000;
   padding: 10px;
   display: flex;
   align-items: center;
+  background-color: white;
+}
+
+.ordenamiento-bar label {
+  padding: 0 !important;
+  margin-right: 20px !important;
 }
 
 .ordenar-btn {
-  background-color: #555; 
-  color: #fff;
+  color: #888;
   border: none;
   padding: 5px 10px;
   margin-right: 10px;
@@ -975,22 +1011,21 @@ font-size: 1.1rem;
 }
 
 .ordenar-btn:hover {
-  background-color: #777; 
+  background-color: #777;
+  color: white;
 }
-
 
 /* DEVICES */
 
 /* Small (SM) - Pantallas mayores o iguales a 576px */
 @media screen and (max-width: 576px) {
-  .card__pidebus{
+  .card__pidebus {
     display: flex;
     flex-direction: column;
   }
 
-  .card{
+  .card {
     border: 0 !important;
-
   }
 
   .middle-line {
@@ -1014,29 +1049,26 @@ font-size: 1.1rem;
   .slider {
     display: none !important;
   }
-  
 }
 
 /* Medium (MD) - Pantallas mayores o iguales a 768px */
-@media (768px <=  width < 992px) {
-.filters .checkbox__list{
- display: flex;
- flex-wrap: wrap;
-}
+@media (768px <= width < 992px) {
+  .filters .checkbox__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.col-cards{
-  width: 100% !important;
-}
+  .col-cards {
+    width: 100% !important;
+  }
 
-.slider {
-  display: none !important;
-}
+  .slider {
+    display: none !important;
+  }
 }
 
 /* Large (LG) - Pantallas mayores o iguales a 992px */
-@media (992px <=  width < 1200px) {
-
-
+@media (992px <= width < 1200px) {
 }
 
 @media screen and (min-width: 1000px) {

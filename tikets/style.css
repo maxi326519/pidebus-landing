@@ -903,7 +903,6 @@
 
 /* ORDENAMIENTO */
 
-
 .cl {
   height:50px;
   padding:10px;
@@ -911,24 +910,34 @@
   text-align: center;
   justify-content: center;
   margin: 0 auto;
-  border-color: #000 !important;
-  border-radius: 1px solid black !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   overflow: hidden !important;
   background-color: white !important;
+  cursor: pointer;
 }
+
+
+.slick-active .cl {
+  background-color: white !important; /* Establecer el fondo en blanco para los elementos activos, excluyendo el central */
+  border: none;
+}
+
+.slick-center .cl {
+  color: white;
+  background-color: var(--primary-color) !important; /* Mantener el fondo naranja solo para el elemento central */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+
+
 
 .cl-yellow { 
   /* background: #f1c40f;  */
-  border-color: #000 !important;
+  background-color: white !important;
   border-radius: 1px solid black !important;
-}
-
-.cl-blue { 
-  background: #3498db; 
-}
-
-.cl-red { 
-  background: #e74c3c; 
+  border: var(--border-color) !important;
 }
 
 .slick-active { 

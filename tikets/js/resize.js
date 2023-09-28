@@ -13,9 +13,9 @@ function generarDiasDelMes(mes, año) {
   var fecha = new Date(año, mes - 1, 1); // mes - 1 porque los meses en JavaScript van de 0 a 11
   var diaInicio = fecha.getDay(); // Obtener el día de la semana en el que comienza el mes
   var ultimoDiaMes = new Date(año, mes, 0).getDate();
+  var primerDia = true;
 
   for (var dia = 1; dia <= ultimoDiaMes; dia++) {
-    var color = colores[colorIndex];
     var diaSemana = obtenerNombreDia((diaInicio + dia - 1) % 7);
     var fechaFormateada =
       diaSemana +
@@ -23,6 +23,10 @@ function generarDiasDelMes(mes, año) {
       dia.toString().padStart(2, "0") +
       "/" +
       mes.toString().padStart(2, "0");
+
+    var clClass = primerDia ? "cl" : "cl  cl-yellow";
+    primerDia = false; // Desactivar para el resto de los días
+
     contenidoHTML +=
       '<div class="slide" data-fecha="' +
       año +
@@ -30,7 +34,9 @@ function generarDiasDelMes(mes, año) {
       mes.toString().padStart(2, "0") +
       "-" +
       dia.toString().padStart(2, "0") +
-      '"><div class="cl border border-dark">' +
+      '"><div class="' +
+      clClass + // Aplicar la clase de fondo aquí
+      '">' +
       fechaFormateada +
       "</div></div>";
 

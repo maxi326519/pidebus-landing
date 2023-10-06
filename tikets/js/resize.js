@@ -11,7 +11,7 @@ function obtenerNombreDia(dia) {
 function generarDiasDelMes(mes, año) {
   var contenidoHTML = "";
   var fecha = new Date(año, mes - 1, 1); // mes - 1 porque los meses en JavaScript van de 0 a 11
-  var diaInicio = fecha.getDay(); // Obtener el día de la semana en el que comienza el mes
+  var diaInicio = fecha.getDay();
   var ultimoDiaMes = new Date(año, mes, 0).getDate();
   var primerDia = true;
 
@@ -25,6 +25,7 @@ function generarDiasDelMes(mes, año) {
       mes.toString().padStart(2, "0");
 
     var clClass = primerDia ? "cl" : "cl  cl-yellow";
+
     primerDia = false; // Desactivar para el resto de los días
 
     contenidoHTML +=
@@ -42,7 +43,6 @@ function generarDiasDelMes(mes, año) {
 
     colorIndex = (colorIndex + 1) % colores.length;
   }
-
   return contenidoHTML;
 }
 
@@ -59,13 +59,42 @@ document.querySelector(".slider").innerHTML = generarDiasDelMes(
 var st = document.querySelector(".pagination");
 var slickEl = document.querySelector(".center");
 
-slickEl.addEventListener(
-  "init reInit afterChange",
-  function (event, slick, currentSlide) {
-    var i = (currentSlide ? currentSlide : 0) + 1;
-    st.textContent = i + " of " + slick.slideCount;
-  }
-);
+// slickEl.addEventListener(
+//   "init reInit afterChange",
+//   function (event, slick, currentSlide) {
+//     var i = (currentSlide ? currentSlide : 0) + 1;
+//     st.textContent = i + " of " + slick.slideCount;
+//   }
+// );
+
+//Funcion para mostrar datos del form
+function mostrarDatosBusqueda() {
+  const origen = document.querySelector("#from").value;
+  const destino = document.querySelector("#to").value;
+  const salida = document.querySelector("#on-way").value;
+  const retorno = document.querySelector("#round-trip").value;
+
+  console.log("Datos de búsqueda:");
+  console.log("Origen:", origen);
+  console.log("Destino:", destino);
+  console.log("Salida:", salida);
+  console.log("Retorno (opcional):", retorno);
+}
+
+const botonBuscar = document.querySelector("#search__submit");
+botonBuscar.addEventListener("click", function (event) {
+  event.preventDefault();
+  mostrarDatosBusqueda();
+  console.log("hola");
+});
+
+//Funcion para mostrar la fecha del slide
+$(slickEl).on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+  const slides = document.querySelectorAll(".slide");
+  const centro = slides[nextSlide];
+  const fechaCentro = centro.dataset.fecha;
+  console.log("Fecha del botón en el centro:", fechaCentro);
+});
 
 $(slickEl).slick({
   centerMode: true,

@@ -945,6 +945,7 @@
   border-radius: 8px;
   overflow: hidden !important;
   background-color: white !important;
+  cursor: pointer;
 }
 
 
@@ -1034,6 +1035,11 @@
 
 /* Small (SM) - Pantallas mayores o iguales a 576px */
 @media screen and (max-width: 576px) {
+
+  .search{
+    margin-top: 6rem;
+  }
+
   .card__pidebus {
     display: flex;
     flex-direction: column;
@@ -1068,6 +1074,30 @@
 
 /* Medium (MD) - Pantallas mayores o iguales a 768px */
 @media (768px <= width < 992px) {
+
+  .search {
+    position: sticky;
+    position: -webkit-sticky;
+    top: calc(10px + var(--nav-bar-height));
+    /*Dejarlofijoenlaparteinferior*/
+    z-index: 800;
+    bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: var(--max-width);
+    margin: 50px auto;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 1px solid #0004;
+    box-shadow: 0 0 10px 5px #0002;
+    background-color: white;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
+
   .filters .checkbox__list {
     display: flex;
     flex-wrap: wrap;
@@ -1084,6 +1114,28 @@
 
 /* Large (LG) - Pantallas mayores o iguales a 992px */
 @media (992px <= width < 1200px) {
+  .search {
+    position: sticky;
+    position: -webkit-sticky;
+    top: calc(10px + var(--nav-bar-height));
+    /*Dejarlofijoenlaparteinferior*/
+    z-index: 800;
+    bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: var(--max-width);
+    margin: 50px auto;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 1px solid #0004;
+    box-shadow: 0 0 10px 5px #0002;
+    background-color: white;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
 }
 
 @media screen and (min-width: 1000px) {

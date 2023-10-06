@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css" />
   <script type="module" src="./js/filters.js"></script>
   <script type="module" src="./js/menu.js"></script>
+  <script type="module" src="./js/form.js"></script>
   <script type="module" src="./js/cards.js"></script>
   <script type="module" src="./js/buttons-asientos.js"></script>
   <script type="module" src="./js/resize.js"></script>
@@ -62,34 +63,42 @@
 
   <!-- SEARCH -->
   <section class="search">
-    <h4 class="search__title">Busca tu pasaje:</h4>
-    <form class="seach__form">
-      <div class="search__places">
-        <div class="search__input-container">
-          <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
-          <label for="from">Desde</label>
-          <input id="from" name="from" type="text" class="form-control" placeholder="Desde" />
+    <section class="search-data open">
+      <span>Desde</span>
+      <span>Hasta</span>
+      <span>Salida</span>
+      <span>Vuelta</span>
+      <button class="view-form-btn" type="button">></button>
+    </section>
+    <div class="search-form close">
+      <form class="seach__form">
+        <div class="search__places">
+          <div class="search__input-container">
+            <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
+            <label for="from">Desde</label>
+            <input id="from" name="from" type="text" class="form-control" placeholder="Desde" />
+          </div>
+          <div class="search__input-container">
+            <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
+            <label for="to">Hasta</label>
+            <input id="floatingInput" name="to" type="text" class="form-control" placeholder="Hasta" />
+          </div>
         </div>
-        <div class="search__input-container">
-          <img class="searc__icon" src="./assets/svg/location.svg" alt="location" />
-          <label for="to">Hasta</label>
-          <input id="floatingInput" name="to" type="text" class="form-control" placeholder="Hasta" />
+        <div class="search__dates">
+          <div class="search__input-container">
+            <label for="on-way">Salida</label>
+            <input id="on-way" name="on-way" type="date" class="form-control" placeholder="Salida" />
+          </div>
+          <div class="search__input-container">
+            <label for="round-trip">Vuelta</label>
+            <input id="round-trip" name="round-trip" type="date" class="form-control" placeholder="Vuelta" />
+          </div>
         </div>
-      </div>
-      <div class="search__dates">
-        <div class="search__input-container">
-          <label for="on-way">Salida</label>
-          <input id="on-way" name="on-way" type="date" class="form-control" placeholder="Salida" />
-        </div>
-        <div class="search__input-container">
-          <label for="round-trip">Vuelta</label>
-          <input id="round-trip" name="round-trip" type="date" class="form-control" placeholder="Vuelta" />
-        </div>
-      </div>
-      <button id="search__submit" class="btn btn-success" type="button">
-        Buscar
-      </button>
-    </form>
+        <button id="search__submit" class="btn btn-success" type="button">
+          Buscar
+        </button>
+      </form>
+    </div>
   </section>
 
   <div class="accordion d-none" id="accordionExample">
@@ -124,13 +133,13 @@
 
           <div id="ordenamiento" class="ordenamiento-bar rounded mb-3">
             <label class="mx-1 pt-2">Ordenar por:</label>
-            <button class="ordenar-btn" data-ordenar="horarios">
+            <button class="ordenar-btn" data-ordenar="horarios" type="button">
               Horarios
             </button>
-            <button class="ordenar-btn" data-ordenar="empresa">
+            <button class="ordenar-btn" data-ordenar="empresa" type="button">
               Empresa
             </button>
-            <button class="ordenar-btn" data-ordenar="precios">
+            <button class="ordenar-btn" data-ordenar="precios" type="button">
               Precios
             </button>
           </div>
@@ -140,7 +149,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="footer">
